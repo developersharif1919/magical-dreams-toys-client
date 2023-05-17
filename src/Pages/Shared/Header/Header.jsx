@@ -1,16 +1,33 @@
 import { Link } from "react-router-dom";
 import logoImg from "../../../assets/logo.png"
 import { FaUserSecret } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+    console.log('user',user);
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/'>All Toys</Link></li>
-        <li><Link to='/'>MyToys</Link></li>
-        <li><Link to='/'>Add A Toy</Link></li>
+        {user && (
+            <>
+                <li><Link to='/'>MyToys</Link></li>
+                <li><Link to='/'>Add A Toy</Link></li>
+            </>
+        )}
         <li><Link to='/'>Blogs</Link></li>
         <li><Link to='/'>Register</Link></li>
     </>
+
+   const handleLogOut = () =>{
+       logOut()
+         .then()
+         .catch((error) => {
+            console.log(error);
+         });
+   }
+
     return (
         <div className="navbar bg-base-100 h-24 mb-4">
             <div className="navbar-start">
@@ -32,10 +49,29 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className=" rounded-full">
-                    <FaUserSecret className="text-5xl mr-3"></FaUserSecret>
-                </div>
-                <Link to='/login'><button className="btn btn-outline w-28">Login</button></Link>
+                {
+                    user ? (
+                        <div className="flex items-center">
+                            {user.photoURL ? (
+                                <div style={{width:'60px',height:'60px'}}>
+                                    <img src={user.photoURL} alt="" className="rounded-full" />
+                                </div>
+                            ) : (
+                                <FaUserSecret className="text-5xl mr-3" />
+                            )}
+                            <button className="btn btn-outline w-28 ml-4" onClick={handleLogOut}>Logout</button>
+                        </div>
+                    ) : (
+                        <div className="flex">
+                            <div className=" rounded-full">
+                                <FaUserSecret className="text-5xl mr-3"></FaUserSecret>
+                            </div>
+                            <Link to='/login'><button className="btn btn-outline w-28">Login</button></Link>
+                        </div>
+                    )
+                }
+
+
             </div>
         </div>
     );
