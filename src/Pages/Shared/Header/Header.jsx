@@ -35,7 +35,7 @@ const Header = () => {
                 <div className=" rounded-full">
                     <FaUserSecret className="text-5xl mr-3"></FaUserSecret>
                 </div>
-                <button className="btn btn-outline w-28">Login</button>
+                <Link to='/login'><button className="btn btn-outline w-28">Login</button></Link>
             </div>
         </div>
     );
