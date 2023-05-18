@@ -1,0 +1,21 @@
+.carousel-bg{
+    
+}
+.bg-1{
+    background-image: url('https://img.freepik.com/free-vector/christmas-toys-background-flat-design_23-2148350472.jpg?w=740&t=st=1684428987~exp=1684429587~hmac=3956acfd0fe7f051d37bc22f33a00421dc002605ad9a378de67cd1a601ac70d9');
+}
+.bg-2{
+    background-image: url('https://img.freepik.com/free-vector/scene-with-two-girls-playing-room_1308-41789.jpg?t=st=1684429173~exp=1684429773~hmac=317426619725fb988908f67a72db5ef98d015765db397a3b8d88c3392e894410');
+}
+.bg-3{
+    background-image: url('https://img.freepik.com/free-vector/christmas-toys-background-flat-design_23-2148350472.jpg?w=740&t=st=1684428987~exp=1684429587~hmac=3956acfd0fe7f051d37bc22f33a00421dc002605ad9a378de67cd1a601ac70d9');
+}
+.carousel-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
