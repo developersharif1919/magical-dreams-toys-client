@@ -6,7 +6,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log('user',user);
+    console.log('user', user);
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/'>All Toys</Link></li>
@@ -17,19 +17,19 @@ const Header = () => {
             </>
         )}
         <li><Link to='/'>Blogs</Link></li>
-        <li><Link to='/'>Register</Link></li>
+        <li><Link to='/signup'>Register</Link></li>
     </>
 
-   const handleLogOut = () =>{
-       logOut()
-         .then()
-         .catch((error) => {
-            console.log(error);
-         });
-   }
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
     return (
-        <div className="navbar bg-base-100 h-24 mb-4">
+        <div className="navbar bg-base-100 h-28 border mb-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -39,9 +39,10 @@ const Header = () => {
                         {navItems}
                     </ul>
                 </div>
-                <div>
-                    <Link to='/' className=" normal-case"> <img src={logoImg} alt="" /></Link>
-                </div>
+                <Link to='/' className=" normal-case">
+                    <img src={logoImg} alt="" />
+                    <h2 className="text-2xl">Example Logo</h2>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -53,7 +54,7 @@ const Header = () => {
                     user ? (
                         <div className="flex items-center">
                             {user.photoURL ? (
-                                <div style={{width:'60px',height:'60px'}}>
+                                <div style={{ width: '60px', height: '60px' }}>
                                     <img src={user.photoURL} alt="" className="rounded-full" />
                                 </div>
                             ) : (

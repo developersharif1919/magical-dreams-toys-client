@@ -88,7 +88,7 @@ const SignUp = () => {
                             <div className="mb-5">
                                 <p className="text-red-600">{error}</p>
                             </div>
-                            <p>Already Have an Account ? <Link to='/login'>Login</Link></p>
+                            <p>Already Have an Account ? <Link to='/login' className="text-red-600">Login</Link></p>
                         </form>
                     </div>
                 </div>
