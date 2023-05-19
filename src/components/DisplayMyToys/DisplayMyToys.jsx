@@ -1,7 +1,9 @@
 import React from 'react';
 
-const DisplayMyToys = ({ toys }) => {
-    const { name, sellerName, subCName, price, availableQuantity } = toys;
+const DisplayMyToys = ({ toys, handleDelete }) => {
+    const {id, name, sellerName, subCName, price, availableQuantity } = toys;
+
+   
     return (
         <div className="overflow-x-auto">
             <table className="w-full  mx-auto border">
@@ -39,7 +41,7 @@ const DisplayMyToys = ({ toys }) => {
                         </td>
                         <td className="border px-4 py-2 text-right">
                             <button className="px-4 py-2 bg-blue-500 text-white rounded">Update</button>
-                            <button className="px-4 py-2 ml-2 bg-blue-500 text-white rounded">Delete</button>
+                            <button onClick={()=>handleDelete(id)} className="px-4 py-2 ml-2 bg-blue-500 text-white rounded">Delete</button>
                         </td>
                     </tr>
                 </tbody>

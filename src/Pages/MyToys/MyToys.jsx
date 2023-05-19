@@ -14,16 +14,32 @@ const MyToys = () => {
       const subcategoryToys = data.flatMap(toy => toy.subcategories);
       setMyToys(subcategoryToys);
     })
-  },[])
+  },[myToys]);
 
-  console.log('myUsdfdser',myToys)
+  const handleDelete = id =>{
+    const procced = confirm('sure to delete');
+    if(procced){
+           fetch(`http://localhost:5000/mytoys/${id}`,{
+            method:'DELETE'
+           })
+           .then(res => res.json())
+           .then(data => {
+              if(data.deletedCount > 0 ){
+                alert('Delete Succussful')
+                const remaining = myToys.filter(myToys => myToys.id !== id)
+                setMyToys(remaining)
+              }
+           } )
+    }
+
+}
 
 
 
   return (
     <div>
         {
-          myToys.map((toys,index)=><DisplayMyToys key={index} toys={toys}></DisplayMyToys>)
+          myToys.map((toys,index)=><DisplayMyToys key={index} toys={toys} handleDelete={handleDelete}></DisplayMyToys>)
         }
     </div>
   );
