@@ -13,7 +13,7 @@ const Header = () => {
         {user && (
             <>
                 <li><Link to='/'>MyToys</Link></li>
-                <li><Link to='/'>Add A Toy</Link></li>
+                <li><Link to='/AddAToy'>Add A Toy</Link></li>
             </>
         )}
         <li><Link to='/'>Blogs</Link></li>
@@ -54,7 +54,7 @@ const Header = () => {
                     user ? (
                         <div className="flex items-center">
                             {user.photoURL ? (
-                                <div style={{ width: '60px', height: '60px' }}>
+                                <div className="tooltip tooltip-left" data-tip={user.displayName} style={{ width: '60px', height: '60px' }}>
                                     <img src={user.photoURL} alt="" className="rounded-full" />
                                 </div>
                             ) : (
