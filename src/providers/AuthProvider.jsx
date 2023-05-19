@@ -4,12 +4,12 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStat
 import { createBrowserHistory } from 'history';
 import app from '../firebase/firebase.config';
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(null);
 const auth = getAuth(app); 
 const history = createBrowserHistory(); 
 
 export const AuthProvider = ({children}) => {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     

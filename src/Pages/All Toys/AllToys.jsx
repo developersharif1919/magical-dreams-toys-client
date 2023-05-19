@@ -12,12 +12,12 @@ const AllToys = () => {
 
     const handleSeeAllToys = () => {
         setShowAll(true);
-        setDisplayCount(searchResults.length);
+        setDisplayCount(loadedToys.length);
     };
 
     const handleSearch = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:5000/toys?search=${searchKeyword}`)
+        fetch(`http://localhost:5000/alltoys?search=${searchKeyword}`)
             .then((response) => response.json())
             .then((data) => {
                 setSearchResults(data);

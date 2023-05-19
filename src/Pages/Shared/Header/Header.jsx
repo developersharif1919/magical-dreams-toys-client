@@ -12,7 +12,7 @@ const Header = () => {
         <li><Link to='/AllToys'>All Toys</Link></li>
         {user && (
             <>
-                <li><Link to='/'>MyToys</Link></li>
+                <li><Link to='/MyToys'>MyToys</Link></li>
                 <li><Link to='/AddAToy'>Add A Toy</Link></li>
             </>
         )}
@@ -41,7 +41,7 @@ const Header = () => {
                 </div>
                 <Link to='/' className=" normal-case">
                     <img src={logoImg} alt="" />
-                    <h2 className="text-2xl">Example Logo</h2>
+                    <h2 className="text-2xl">Magical Dreams Toys</h2>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

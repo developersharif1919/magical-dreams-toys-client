@@ -39,7 +39,7 @@ const AddAToy = () => {
             ]
         }
 
-        fetch('http://localhost:5000/toys',{
+        fetch('http://localhost:5000/alltoys',{
             method: "POST",
             headers:{
                 'content-type' : 'application/json'
