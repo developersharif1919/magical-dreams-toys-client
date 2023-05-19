@@ -22,11 +22,12 @@ const AddAToy = () => {
         event.preventDefault();
 
         const toyInformation = {
-            name:category,
+            name:name,
             category: {
-                name: category,
+                categoryName: category,
                 subcategories: [
                     {
+                        subCName: subCategory,
                         name: name,
                         price: parseFloat(price),
                         rating: parseFloat(rating),
@@ -92,17 +93,24 @@ const AddAToy = () => {
                     <label>Category:</label>
                     <select className='border' value={category} onChange={(e) => setCategory(e.target.value)} required>
                         <option value="">Select</option>
-                        <option value="Math Toys">Math Toys</option>
-                        <option value="Language Toys">Language Toys</option>
-                        <option value="Science Toys">Science Toys</option>
+                        <option value="Math Toys">Sports Cars</option>
+                        <option value="Language Toys">Racing Cars</option>
+                        <option value="Science Toys">Emergency Vehicles</option>
                     </select>
                 </div>
                 <div className='mb-4 form-control'>
                     <label>Sub Category:</label>
                     <select className='border' value={subCategory} onChange={(e) => setSubCategory(e.target.value)} required>
                         <option value="">Select</option>
-                        <option value="Language Toys">Language Toys</option>
-                        <option value="Science Toys">Science Toys</option>
+                        <option value="Formula 1 cars">Formula 1 cars</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="Muscle cars">Muscle cars </option>
+                        <option value="NASCAR cars">NASCAR cars</option>
+                        <option value="Rally cars">Rally cars</option>
+                        <option value="Dragsters">Dragsters</option>
+                        <option value="Mini Fire Trucks">Mini Fire Trucks</option>
+                        <option value="Mini Police Cars">Mini Police Cars</option>
+                        <option value="Ambulances">Ambulances</option>
                     </select>
                 </div>
 
