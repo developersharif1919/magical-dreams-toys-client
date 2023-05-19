@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 
@@ -23,21 +24,19 @@ const AddAToy = () => {
 
         const toyInformation = {
             name:name,
-            category: {
-                categoryName: category,
-                subcategories: [
-                    {
-                        subCName: subCategory,
-                        name: name,
-                        price: parseFloat(price),
-                        rating: parseFloat(rating),
-                        availableQuantity: parseInt(availableQuantity),
-                        detailDescription,pictureUrl,
-                        sellerName:user?.displayName,
-                        sellerEmail:user?.email,
-                    }
-                ]
-            }
+            category:category,
+            subcategories: [
+                {
+                    subCName: subCategory,
+                    name: name,
+                    price: parseFloat(price),
+                    rating: parseFloat(rating),
+                    availableQuantity: parseInt(availableQuantity),
+                    detailDescription,pictureUrl,
+                    sellerName:user?.displayName,
+                    sellerEmail:user?.email,
+                }
+            ]
         }
 
         fetch('http://localhost:5000/toys',{
@@ -93,9 +92,9 @@ const AddAToy = () => {
                     <label>Category:</label>
                     <select className='border' value={category} onChange={(e) => setCategory(e.target.value)} required>
                         <option value="">Select</option>
-                        <option value="Math Toys">Sports Cars</option>
-                        <option value="Language Toys">Racing Cars</option>
-                        <option value="Science Toys">Emergency Vehicles</option>
+                        <option value="Sports Cars">Sports Cars</option>
+                        <option value="Racing Cars">Racing Cars</option>
+                        <option value="Emergency Vehicles">Emergency Vehicles</option>
                     </select>
                 </div>
                 <div className='mb-4 form-control'>

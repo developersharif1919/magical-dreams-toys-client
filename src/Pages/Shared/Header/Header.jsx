@@ -9,7 +9,7 @@ const Header = () => {
     console.log('user', user);
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>All Toys</Link></li>
+        <li><Link to='/AllToys'>All Toys</Link></li>
         {user && (
             <>
                 <li><Link to='/'>MyToys</Link></li>
