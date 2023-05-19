@@ -1,36 +1,30 @@
 import{ useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import DisplayMyToys from "../../components/DisplayMyToys/DisplayMyToys";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
-  const [toys, setToys] = useState([]);
+  const [myToys, setMyToys] = useState([]);
+  const url = `http://localhost:5000/mytoys?sellerEmail=${user.email}`;
 
-  useEffect(() => {
-    const fetchToys = async () => {
-      try {
-        const response = await fetch(`http://localhost:5000/mytoys/${user.email}`);
-        const data = await response.json();
-        setToys(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  useEffect(()=>{
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const subcategoryToys = data.flatMap(toy => toy.subcategories);
+      setMyToys(subcategoryToys);
+    })
+  },[])
 
-    fetchToys();
-  }, [user]);
-  console.log(toys);
+  console.log('myUsdfdser',myToys)
+
+
 
   return (
     <div>
-      <h2>My Toys</h2>
-      {toys.map((toy) => (
-        <div key={toy._id}>
-          <h3>{toy.name}</h3>
-          <p>{toy.category}</p>
-          <p>{toy.price}</p>
-          <p>{toy.rating}</p>
-        </div>
-      ))}
+        {
+          myToys.map((toys,index)=><DisplayMyToys key={index} toys={toys}></DisplayMyToys>)
+        }
     </div>
   );
 };
