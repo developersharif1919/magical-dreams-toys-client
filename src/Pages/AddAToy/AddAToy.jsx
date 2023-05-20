@@ -93,23 +93,23 @@ const AddAToy = () => {
                     <select className='border' value={category} onChange={(e) => setCategory(e.target.value)} required>
                         <option value="">Select</option>
                         <option value="Sports Cars">Sports Cars</option>
-                        <option value="Racing Cars">Racing Cars</option>
                         <option value="Emergency Vehicles">Emergency Vehicles</option>
+                        <option value="Racing Cars">Racing Cars</option>
                     </select>
                 </div>
                 <div className='mb-4 form-control'>
                     <label>Sub Category:</label>
                     <select className='border' value={subCategory} onChange={(e) => setSubCategory(e.target.value)} required>
                         <option value="">Select</option>
-                        <option value="Formula 1 cars">Formula 1 cars</option>
-                        <option value="Lamborghini">Lamborghini</option>
-                        <option value="Muscle cars">Muscle cars </option>
-                        <option value="NASCAR cars">NASCAR cars</option>
-                        <option value="Rally cars">Rally cars</option>
+                        <option value="Lamborghini">Lamborghini (Sports Cars)</option>
+                        <option value="Mini Police Cars">Mini Police Cars (Emergency Vehicles)</option>
+                        <option value="Formula 1 cars">Formula 1 cars (Racing Cars)</option>
+                        {/* <option value="Muscle cars">Muscle cars </option>
                         <option value="Dragsters">Dragsters</option>
                         <option value="Mini Fire Trucks">Mini Fire Trucks</option>
-                        <option value="Mini Police Cars">Mini Police Cars</option>
                         <option value="Ambulances">Ambulances</option>
+                        <option value="Rally cars">Rally cars</option>
+                        <option value="NASCAR cars">NASCAR cars</option> */}
                     </select>
                 </div>
 
