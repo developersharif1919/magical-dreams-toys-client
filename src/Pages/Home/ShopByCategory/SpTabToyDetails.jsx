@@ -11,9 +11,9 @@ const SpTabToyDetails = ({ spToys }) => {
     };
 
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
-            <figure className="md:w-1/3">
-                <img src={pictureUrl} alt="Movie" />
+        <div style={{height:'250px'}} className="card items-center border card-side bg-base-100 shadow-xl">
+            <figure style={{height:'150px'}} className="md:w-1/3">
+                <img className="h-full" src={pictureUrl} alt="Movie" />
             </figure>
             <div className="card-body justify-between flex-row items-center ">
                 <div>

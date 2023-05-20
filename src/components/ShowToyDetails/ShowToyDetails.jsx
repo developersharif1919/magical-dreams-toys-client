@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ShowToyDetails = ({ toyInfo }) => {
     const { pictureUrl, name, sellerName, sellerEmail, price, rating, availableQuantity, detailDescription } = toyInfo;
