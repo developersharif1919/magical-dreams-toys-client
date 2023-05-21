@@ -12,7 +12,7 @@ const GallerySection = () => {
   return (
     <section className="py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl mt-12 text-center font-bold text-gray-800 mb-12">Car Toy Gallery</h2>
+        <h2 className="text-5xl mt-12 text-center font-bold text-gray-800 mb-12">Photo Gallery</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12">
           {images.map((image) => (
             <div key={image.id} className="rounded overflow-hidden shadow-lg">

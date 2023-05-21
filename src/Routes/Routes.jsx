@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: '/AllToys',
         element: <AllToys></AllToys>,
-        loader: () => fetch('http://localhost:5000/alltoys')
+        loader: () => fetch('https://magical-dreams-toys-server.vercel.app/alltoys')
       },
       {
         path: '/ToyDetails/:id',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             <ToyDetails></ToyDetails>
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/alltoys/${params.id}`)
+        loader: ({ params }) => fetch(`https://magical-dreams-toys-server.vercel.app/alltoys/${params.id}`)
       },
       {
         path: '/MyToys',
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
             <UpDateToyInformation></UpDateToyInformation>
           </PrivateRoute>
         ),
-        loader: ({params})=>fetch(`http://localhost:5000/alltoys/${params.id}`)
+        loader: ({params})=>fetch(`https://magical-dreams-toys-server.vercel.app/alltoys/${params.id}`)
       },{
         path:'/blogs',
         element:<Blogs></Blogs>

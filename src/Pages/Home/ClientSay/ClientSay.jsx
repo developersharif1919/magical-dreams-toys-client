@@ -22,7 +22,7 @@ const ClientSay = () => {
             id: 3,
             name: 'John Doe',
             role: 'CEO, Company A',
-            image: 'https://img.freepik.com/free-photo/portrait-beautiful-face-young-woman-with-long-brown-hair_186202-4331.jpg?w=740&t=st=1684598060~exp=1684598660~hmac=e8904db7f7655e1213bb156eb990ff4a6f8c5297f1f60be8de7408cb8e80d314',
+            image: 'https://img.freepik.com/free-photo/handsome-smiling-man-looking-with-disbelief_176420-19591.jpg?w=740&t=st=1684684739~exp=1684685339~hmac=f4cbe60cea683f171b2ca0975a7ae3778de88ab6f9ab4f048f343d2b443f89d4',
             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor gravida nibh vitae condimentum.',
         },
         {
@@ -36,7 +36,7 @@ const ClientSay = () => {
             id: 5,
             name: 'John Doe',
             role: 'CEO, Company A',
-            image: 'https://img.freepik.com/free-photo/portrait-beautiful-face-young-woman-with-long-brown-hair_186202-4331.jpg?w=740&t=st=1684598060~exp=1684598660~hmac=e8904db7f7655e1213bb156eb990ff4a6f8c5297f1f60be8de7408cb8e80d314',
+            image: 'https://img.freepik.com/free-photo/handsome-smiling-man-looking-with-disbelief_176420-19591.jpg?w=740&t=st=1684684739~exp=1684685339~hmac=f4cbe60cea683f171b2ca0975a7ae3778de88ab6f9ab4f048f343d2b443f89d4',
             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor gravida nibh vitae condimentum.',
         },
         {

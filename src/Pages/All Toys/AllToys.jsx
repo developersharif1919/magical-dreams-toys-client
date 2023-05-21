@@ -20,7 +20,7 @@ const AllToys = () => {
         
         const sort = 'asc';
         
-        fetch(`http://localhost:5000/alltoys?search=${searchKeyword}&sort=${sort}`)
+        fetch(`https://magical-dreams-toys-server.vercel.app/alltoys?search=${searchKeyword}&sort=${sort}`)
           .then((response) => response.json())
           .then((data) => {
             setSearchResults(data);

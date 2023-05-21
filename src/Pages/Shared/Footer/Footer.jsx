@@ -11,24 +11,22 @@ const Footer = () => {
                     <h2 className='text-2xl font-bold'>Magical Dreams Toys</h2>
                 </Link>
                 <div>
-                    <span className="footer-title">Services</span>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <span className="footer-title">Cars Toy</span>
+                    <a className="link link-hover">Emergency Vehicles</a>
+                    <a className="link link-hover">Raching Cars</a>
                 </div>
                 <div>
                     <span className="footer-title">Company</span>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <Link to='/' className="link link-hover">Home</Link>
+                    <Link to='/AllToys' className="link link-hover">All Toys</Link>
+                    <Link to='/Login' className="link link-hover">Login</Link>
+                    <Link to='SignUp' className="link link-hover">Registation</Link>
                 </div>
                 <div>
-                    <span className="footer-title">Legal</span>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <span className="footer-title">Social Link</span>
+                    <Link className="link link-hover">Face book</Link>
+                    <Link className="link link-hover">Whats App</Link>
+                    <Link className="link link-hover">Twitter</Link>
                 </div>
             </footer>
         </div>

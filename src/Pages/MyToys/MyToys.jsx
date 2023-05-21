@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
-  const url = `http://localhost:5000/mytoys?sellerEmail=${user.email}`;
+  const url = `https://magical-dreams-toys-server.vercel.app/mytoys?sellerEmail=${user.email}`;
 
   useEffect(()=>{
     document.title = "MDT | My Toys";
@@ -28,7 +28,7 @@ const MyToys = () => {
       cancelButtonText: 'No',
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/mytoys/${id}`,{
+        fetch(`https://magical-dreams-toys-server.vercel.app/mytoys/${id}`,{
           method:'DELETE'
          })
          .then(res => res.json())
