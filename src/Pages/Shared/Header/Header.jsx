@@ -39,8 +39,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to='/' className=" normal-case">
-                    <img src={logoImg} alt="" />
-                    <h2 className="text-2xl">Magical Dreams Toys</h2>
+                    <img src={logoImg} alt="" className="w-8 h-8 sm:w-12 sm:h-12"/>
+                    <h2 className="text-xl sm:text-2xl ml-2">Magical Dreams Toys</h2>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

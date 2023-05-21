@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import loginImg from '../../assets/images/login.jpg'
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from 'sweetalert2'
 
@@ -56,6 +56,10 @@ const SignUp = () => {
         }
 
     };
+
+    useEffect(() => {
+        document.title = "MDT | SignUp";
+    }, []);
 
     return (
         <div className="hero min-h-screen bg-base-200">

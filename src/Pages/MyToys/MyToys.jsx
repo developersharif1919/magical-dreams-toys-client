@@ -9,6 +9,7 @@ const MyToys = () => {
   const url = `https://magical-dreams-toys-server.vercel.app/mytoys?sellerEmail=${user.email}`;
 
   useEffect(()=>{
+    document.title = "MDT | My Toys";
     fetch(url)
     .then(res => res.json())
     .then(data => {

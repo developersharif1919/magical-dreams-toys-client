@@ -3,7 +3,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import loginImg from '../../assets/images/login.jpg'
 import { FcGoogle } from "react-icons/fc";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from 'sweetalert2'
 const Login = () => {
@@ -41,6 +41,9 @@ const Login = () => {
         }
 
     }
+    useEffect(() => {
+        document.title = "MDT | Login";
+    }, []);
 
     return (
         <div className="hero min-h-screen bg-base-200">

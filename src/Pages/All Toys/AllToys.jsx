@@ -1,7 +1,7 @@
 
 import { useLoaderData } from 'react-router-dom';
 import Toy from '../../components/Toy/Toy';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const AllToys = () => {
     const loadedToys = useLoaderData();
@@ -31,8 +31,9 @@ const AllToys = () => {
 
     const toysToDisplay = searchKeyword ? searchResults : loadedToys;
 
-
-    console.log('Loaded Users', loadedToys);
+    useEffect(() => {
+        document.title = "MDT | All Toys";
+    }, []);
     return (
         <div>
             <h1 className='text-center'>Total Toys:{loadedToys.length}</h1>

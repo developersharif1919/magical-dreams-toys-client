@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2'
 
@@ -61,6 +61,9 @@ const AddAToy = () => {
         console.log(toyInformation);
     }
 
+    useEffect(() => {
+        document.title = "MDT | Add A Toy";
+    }, []);
     return (
         <div>
             <h2 className='text-center text-4xl font-bold'>ADD A TOY</h2>
