@@ -18,7 +18,7 @@ const UpdateInfo = ({ toyInfo }) => {
             detailDescription: updatedDetailDescription
           };
 
-          fetch(`https://magical-dreams-toys-server.vercel.app/updatetoys/${id}`, {
+          fetch(`http://localhost:5000/updatetoys/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'

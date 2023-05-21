@@ -17,7 +17,7 @@ const ShopByCategory = () => {
   const fetchData = async (categoryName, subCName) => {
     try {
       const response = await axios.get(
-        `https://magical-dreams-toys-server.vercel.app/tabtoys?categoryName=${encodeURIComponent(categoryName)}&subCName=${encodeURIComponent(subCName)}`
+        `http://localhost:5000/tabtoys?categoryName=${encodeURIComponent(categoryName)}&subCName=${encodeURIComponent(subCName)}`
       );
       const data = response.data;
 

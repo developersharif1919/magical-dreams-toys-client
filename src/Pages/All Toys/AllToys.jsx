@@ -17,17 +17,21 @@ const AllToys = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        fetch(`https://magical-dreams-toys-server.vercel.app/alltoys?search=${searchKeyword}`)
-            .then((response) => response.json())
-            .then((data) => {
-                setSearchResults(data);
-                setShowAll(false);
-                setDisplayCount(20);
-            })
-            .catch((error) => {
-                console.error('Error searching toys:', error);
-            });
-    };
+        
+        const sort = 'asc';
+        
+        fetch(`http://localhost:5000/alltoys?search=${searchKeyword}&sort=${sort}`)
+          .then((response) => response.json())
+          .then((data) => {
+            setSearchResults(data);
+            setShowAll(false);
+            setDisplayCount(20);
+          })
+          .catch((error) => {
+            console.error('Error searching toys:', error);
+          });
+      };
+      
 
     const toysToDisplay = searchKeyword ? searchResults : loadedToys;
 

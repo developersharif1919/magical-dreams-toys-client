@@ -40,7 +40,7 @@ const AddAToy = () => {
             ]
         }
 
-        fetch('https://magical-dreams-toys-server.vercel.app/alltoys',{
+        fetch('http://localhost:5000/alltoys',{
             method: "POST",
             headers:{
                 'content-type' : 'application/json'

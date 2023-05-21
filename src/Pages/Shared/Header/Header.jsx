@@ -38,10 +38,12 @@ const Header = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to='/' className=" normal-case">
-                    <img src={logoImg} alt="" className="w-8 h-8 sm:w-12 sm:h-12"/>
-                    <h2 className="text-xl sm:text-2xl ml-2">Magical Dreams Toys</h2>
-                </Link>
+                <div className="">
+                    <Link to='/' className="normal-case flex flex-col items-center md:items-start">
+                        <img src={logoImg} alt="" className=" md:w-32  sm:w-12 sm:h-12" />
+                        <h2 className="text-xl sm:text-2xl ml-2">Magical Dreams Toys</h2>
+                    </Link>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
