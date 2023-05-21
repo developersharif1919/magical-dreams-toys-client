@@ -8,7 +8,7 @@ const Carousel = () => {
                 <div id="slide1" style={{height:'35%',padding:'40px',boxSizing:'border-box'}} className="carousel-item carousel-bg bg-1 relative w-full bg-black">
                     <div style={{width:'80%',position:'relative',top:'0', right:'0'}} className='flex mx-auto items-center justify-between'>
                         <div className='w-1/2'>
-                            <img className='' src='https://img.freepik.com/free-vector/artist-robot_1268-53.jpg?w=740&t=st=1684425808~exp=1684426408~hmac=61e4534d434e614063348569b27b3a0a6b8b828decb7db0735a43c49b9e2ad3d' />
+                            <img className='' src='https://img.freepik.com/premium-vector/cartoon-little-boy-playing-with-many-toys_29190-7169.jpg?w=740' />
                         </div>
                         <div style={{boxSizing:'border-box'}} className='text-center text-white'>
                             <h2>We help you take care of the kids</h2>
@@ -40,7 +40,7 @@ const Carousel = () => {
                  <div id="slide3" style={{height:'35%',padding:'40px',boxSizing:'border-box'}} className="carousel-item carousel-bg bg-3 relative w-full bg-black">
                     <div style={{width:'80%',position:'relative',top:'0', right:'0'}} className='flex mx-auto  items-center justify-between'>
                         <div className='w-1/2'>
-                            <img className='' src='https://img.freepik.com/free-vector/artist-robot_1268-53.jpg?w=740&t=st=1684425808~exp=1684426408~hmac=61e4534d434e614063348569b27b3a0a6b8b828decb7db0735a43c49b9e2ad3d' />
+                            <img className='' src='https://img.freepik.com/free-photo/kindergarten-concept-with-wooden-blocks-kid-toys-wooden-grungy-background-side-view_176474-7732.jpg?w=740&t=st=1684691004~exp=1684691604~hmac=09808aca961d35a3e32f4305be8d77b3303d260c288a2b1e7b9965c4c0f61243' />
                         </div>
                         <div style={{boxSizing:'border-box'}} className='text-center text-white'>
                             <h2>We help you take care of the kids</h2>
