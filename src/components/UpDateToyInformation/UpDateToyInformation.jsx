@@ -9,7 +9,7 @@ const UpDateToyInformation = () => {
     }, []);
     return (
         <div>
-           <h2>Update Information</h2>
+           <h2 className='text-center'>Update Information</h2>
            {
             myToyInformation.map((toyInfo, index)=><UpdateInfo key={index} toyInfo={toyInfo}></UpdateInfo>)
            }

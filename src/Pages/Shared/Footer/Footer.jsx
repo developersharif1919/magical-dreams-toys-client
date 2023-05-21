@@ -11,7 +11,8 @@ const Footer = () => {
                     <h2 className='text-2xl font-bold'>Magical Dreams Toys</h2>
                 </Link>
                 <div>
-                    <span className="footer-title">Cars Toy</span>
+                    <span className="footer-title">Our Toys</span>
+                    <a className="link link-hover">Sports Carts</a>
                     <a className="link link-hover">Emergency Vehicles</a>
                     <a className="link link-hover">Raching Cars</a>
                 </div>
@@ -24,11 +25,15 @@ const Footer = () => {
                 </div>
                 <div>
                     <span className="footer-title">Social Link</span>
-                    <Link className="link link-hover">Face book</Link>
+                    <Link to='https://web.facebook.com/' className="link link-hover">Face book</Link>
                     <Link className="link link-hover">Whats App</Link>
                     <Link className="link link-hover">Twitter</Link>
                 </div>
             </footer>
+            <div className="col-md-6 text-center bg-black text-white p-4">
+                <p>&copy; Magical Dreams Toys. All rights reserved.</p>
+            </div>
+
         </div>
     );
 };
