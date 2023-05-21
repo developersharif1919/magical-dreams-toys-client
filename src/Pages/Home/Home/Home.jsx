@@ -1,3 +1,4 @@
+import Newsletter from "../Newsletter/Newsletter";
 import Carousel from "../Carousel/Carousel";
 import ClientSay from "../ClientSay/ClientSay";
 import GallerySection from "../GalarySection/GallerySection";
@@ -10,6 +11,7 @@ const Home = () => {
             <GallerySection></GallerySection>
             <ShopByCategory></ShopByCategory>
             <ClientSay></ClientSay>
+            <Newsletter></Newsletter>
         </div>
     );
 };
