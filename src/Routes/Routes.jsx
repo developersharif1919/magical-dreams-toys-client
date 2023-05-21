@@ -10,10 +10,12 @@ import PrivateRoute from "./PrivateRoute";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 import UpDateToyInformation from "../components/UpDateToyInformation/UpDateToyInformation";
 import Blogs from "../Pages/Blogs/Blogs";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
