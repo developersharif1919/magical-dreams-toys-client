@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Swal from 'sweetalert2'
 
 const UpdateInfo = ({ toyInfo }) => {
     const { id, pictureUrl, subCName, name, sellerName, sellerEmail, price, rating, availableQuantity, detailDescription } = toyInfo;
@@ -17,7 +18,7 @@ const UpdateInfo = ({ toyInfo }) => {
             detailDescription: updatedDetailDescription
           };
 
-          fetch(`http://localhost:5000/updatetoys/${id}`, {
+          fetch(`https://magical-dreams-toys-server.vercel.app/updatetoys/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'
@@ -28,7 +29,12 @@ const UpdateInfo = ({ toyInfo }) => {
             .then(data => {
               console.log(data);
               if (data.modifiedCount > 0) {
-                alert('Subcategory information updated successfully');
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Toy Information Updated Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'ok'
+                  })
               }
             });
         };

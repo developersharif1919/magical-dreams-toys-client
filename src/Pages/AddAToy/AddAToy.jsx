@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2'
 
 const AddAToy = () => {
     const { user } = useContext(AuthContext);
@@ -39,7 +40,7 @@ const AddAToy = () => {
             ]
         }
 
-        fetch('http://localhost:5000/alltoys',{
+        fetch('https://magical-dreams-toys-server.vercel.app/alltoys',{
             method: "POST",
             headers:{
                 'content-type' : 'application/json'
@@ -49,7 +50,12 @@ const AddAToy = () => {
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
-                alert('Successful');
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Toy Added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
             }
         })
         console.log(toyInformation);

@@ -17,7 +17,7 @@ const AllToys = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:5000/alltoys?search=${searchKeyword}`)
+        fetch(`https://magical-dreams-toys-server.vercel.app/alltoys?search=${searchKeyword}`)
             .then((response) => response.json())
             .then((data) => {
                 setSearchResults(data);

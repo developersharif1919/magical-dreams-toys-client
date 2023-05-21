@@ -5,6 +5,7 @@ import loginImg from '../../assets/images/login.jpg'
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from 'sweetalert2'
 const Login = () => {
 
     const { signInUser, handleGoogleSignIn } = useContext(AuthContext)
@@ -22,7 +23,12 @@ const Login = () => {
             signInUser(email, password)
                 .then(result => {
                     const user = result.user;
-                    console.log(user)
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Login Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                      })
                     navigate('/')
 
                 })

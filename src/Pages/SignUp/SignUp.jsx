@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import loginImg from '../../assets/images/login.jpg'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from 'sweetalert2'
 
 const SignUp = () => {
 
@@ -25,11 +26,22 @@ const SignUp = () => {
                 registerUser(email, password, name, userPhoto)
                     .then((result) => {
                         const user = result.user;
-                        console.log(user)
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Registation Successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Ok'
+                          })
                     })
                     .catch((error) => {
                         if (error.code === 'auth/email-already-in-use') {
                             setError('Email is already Registered');
+                            Swal.fire({
+                                title: 'warning!',
+                                text: 'Email is already Registered',
+                                icon: 'warning',
+                                confirmButtonText: 'Ok'
+                              })
                           } else {
                             console.log(error);
                           }
