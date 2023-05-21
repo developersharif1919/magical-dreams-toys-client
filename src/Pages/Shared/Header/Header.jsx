@@ -6,7 +6,6 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log('user', user);
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/AllToys'>All Toys</Link></li>
@@ -16,7 +15,7 @@ const Header = () => {
                 <li><Link to='/AddAToy'>Add A Toy</Link></li>
             </>
         )}
-        <li><Link to='/'>Blogs</Link></li>
+        <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/signup'>Register</Link></li>
     </>
 

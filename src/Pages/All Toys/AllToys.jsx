@@ -6,7 +6,7 @@ import { useState } from 'react';
 const AllToys = () => {
     const loadedToys = useLoaderData();
     const [showAll, setShowAll] = useState(false);
-    const [displayCount, setDisplayCount] = useState(2);
+    const [displayCount, setDisplayCount] = useState(20);
     const [searchKeyword, setSearchKeyword] = useState('');
     const [searchResults, setSearchResults] = useState([]);
 
@@ -22,7 +22,7 @@ const AllToys = () => {
             .then((data) => {
                 setSearchResults(data);
                 setShowAll(false);
-                setDisplayCount(2);
+                setDisplayCount(20);
             })
             .catch((error) => {
                 console.error('Error searching toys:', error);
@@ -36,7 +36,7 @@ const AllToys = () => {
     return (
         <div>
             <h1 className='text-center'>Total Toys:{loadedToys.length}</h1>
-            <form onSubmit={handleSearch} className='flex justify-center mt-4'>
+            <form onSubmit={handleSearch} className='flex mb-12 justify-center mt-4'>
                 <input
                     type='text'
                     placeholder='Search by Toy Name'
@@ -54,7 +54,7 @@ const AllToys = () => {
             <div>
                 {toysToDisplay.slice(0, displayCount).map((data) => data.subcategories.map((toy, index) => <Toy key={index} toy={toy} />))}
             </div>
-            {!showAll && toysToDisplay.length > 2 && (
+            {!showAll && toysToDisplay.length > 20 && (
                 <div className="flex justify-center mt-4">
                     <button className="px-4 py-2 bg-blue-500 text-white rounded" onClick={handleSeeAllToys}>
                         See More
