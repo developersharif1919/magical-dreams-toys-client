@@ -58,7 +58,7 @@ const ClientSay = () => {
     return (
         <section className="py-8 mt-28 bg-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-5xl text-center mb-28 mt-16 font-bold text-gray-800">Our Customer Loves Us</h2>
+                <h2 className="text-5xl text-center mb-28 mt-16 font-bold text-gray-800">Our Customer Reviews</h2>
                 <Carousel
                     showArrows={true}
                     showIndicators={true}
